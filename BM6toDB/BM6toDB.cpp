@@ -4,10 +4,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-
-#ifdef LINUX_BUILD
 #include <cstring>
-#endif
 
 #include "SimState.h"
 #include "Source_BMNavTxt.h"
