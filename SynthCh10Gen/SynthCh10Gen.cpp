@@ -35,6 +35,7 @@ increases at the defined tick rate.
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <cstring>
 
 #if defined(_WIN32)
 #define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
@@ -45,9 +46,6 @@ increases at the defined tick rate.
 #pragma comment(lib,"ws2_32.lib") //Winsock Library
 #endif
 
-#ifdef LINUX_BUILD
-#include <cstring>
-#endif
 
 #include "config.h"
 #include "i106_stdint.h"

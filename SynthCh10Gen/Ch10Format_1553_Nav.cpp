@@ -2,10 +2,7 @@
 #include <assert.h>
 #include <iostream>     // std::cout
 #include <iomanip>
-
-#ifdef LINUX_BUILD
 #include <cstring>
-#endif
 
 #include "Common.h"
 #include "Ch10Format_1553_Nav.h"

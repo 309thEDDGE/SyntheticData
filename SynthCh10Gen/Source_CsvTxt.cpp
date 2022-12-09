@@ -4,10 +4,7 @@
 #include <chrono>
 #include <cstdio>
 #include <string>
-
-#ifdef LINUX_BUILD
 #include <cstring>
-#endif
 
 #include "Source_Nav.h"
 #include "Source_CsvTxt.h"

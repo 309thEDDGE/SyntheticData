@@ -9,9 +9,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#ifdef LINUX_BUILD
 #include <cstring>
-#endif
 
 // irig106lib
 #include "config.h"

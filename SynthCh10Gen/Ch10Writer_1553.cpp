@@ -3,9 +3,7 @@
 #include "Ch10Writer.h"
 #include "Ch10Writer_1553.h"
 
-#ifdef LINUX_BUILD
 #include <cstring>
-#endif
 
 
 // ----------------------------------------------------------------------------

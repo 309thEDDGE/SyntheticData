@@ -10,10 +10,7 @@
 #include <stdlib.h>
 #include <memory>
 //#include <math.h>
-
-#ifdef LINUX_BUILD
 #include <cstring>
-#endif
 
 
 // irig106lib

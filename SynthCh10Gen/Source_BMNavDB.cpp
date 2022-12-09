@@ -3,9 +3,7 @@
 #include <cstdio>
 #include <string>
 
-#ifdef LINUX_BUILD
 #include <cstring>
-#endif
 
 #include "sqlite3.h"
 
