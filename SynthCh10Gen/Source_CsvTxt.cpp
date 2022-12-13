@@ -251,7 +251,7 @@ bool ClSource_CsvTxt::ConvertTime(std::string sTime, double *fDecodedTime)
 
     // Convert to a time_t
     #ifdef LINUX_BUILD
-    lNasaTime = mktime(&suNasaTime);
+    lNasaTime = timegm(&suNasaTime);
     #else
     lNasaTime = _mkgmtime(&suNasaTime);
     #endif
