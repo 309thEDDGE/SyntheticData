@@ -9,7 +9,7 @@
 #include "Source_CsvTxt.h"
 #include "Source_NasaNavTxt.h"
 
-#ifndef LINUX_BUILD
+#ifdef _WIN32
 const double M_PI = 3.141592653589793238463;    // value of pi
 #endif
 

@@ -3,7 +3,6 @@ project(BM6toXPlaneVideo)
 
 find_library(LIBSQLITE3 NAMES libsqlite3 sqlite3 libsqlite3.so)
 
-message("LIBSQLITE3 ${LIBSQLITE3}")
 
 
 add_executable(bm6toxplanevideo

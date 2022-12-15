@@ -1,5 +1,5 @@
 
-#ifndef LINUX_BUILD
+#ifdef _WIN32
 #include <io.h>
 #endif
 

@@ -2,14 +2,13 @@ cmake_minimum_required(VERSION 3.15)
 
 project(SynthCh10Gen)
 
+option(COMPILE_NASA "compile with NASA data" ON)
+
 if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
      # I am top-level project.
     find_library(LIBSQLITE3 NAMES libsqlite3 sqlite3 libsqlite3.so)
-    message(STATUS "LIBSQLITE3 ${LIBSQLITE3}")
 
     add_subdirectory(../3rdParty ./libs)
-else()
-    # I am called from other project with add_subdirectory().
 endif()
 
 
@@ -31,6 +30,10 @@ add_executable(synth_ch10gen
     Source_VideoDB.cpp
     Source_CsvTxt.cpp
     SynthCh10Gen.cpp)
+
+if (COMPILE_NASA)
+    target_compile_definitions(synth_ch10gen PUBLIC COMPILE_NASA)
+endif()
 
 target_link_libraries(synth_ch10gen PUBLIC irig106 csvparser)
 target_link_libraries(synth_ch10gen PUBLIC ${LIBSQLITE3})

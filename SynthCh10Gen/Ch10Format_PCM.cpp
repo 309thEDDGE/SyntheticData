@@ -147,10 +147,10 @@ std::string ClCh10Format_PCM_SynthFmt1::TMATS(ClTmatsIndexes & TmatsIndex, std::
     uWordsPerMinorFrame = ((uBitsPerMinorFrame - 32) / uWordLen) + 1;
     
 
-    #ifdef LINUX_BUILD
-    ulDataRate          = (fFrameRate * float(uBitsPerMinorFrame));
-    #else
+    #ifdef _WIN32
     ulDataRate          = unsigned long(fFrameRate * float(uBitsPerMinorFrame));
+    #else
+    ulDataRate          = (fFrameRate * float(uBitsPerMinorFrame));
     #endif
     
     // PCM attributes specific to Synthetic PCM Data Format 1

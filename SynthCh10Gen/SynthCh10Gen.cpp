@@ -99,6 +99,10 @@ using namespace Irig106;
  * ----------------------
  */
 
+#ifndef ARINC429_BUS_SPEED_LOW
+#define ARINC429_BUS_SPEED_LOW 1
+#endif
+
 #define MAJOR_VERSION  "01"
 #define MINOR_VERSION  "00"
 
