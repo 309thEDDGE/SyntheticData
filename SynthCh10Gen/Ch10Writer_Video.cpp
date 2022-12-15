@@ -1,5 +1,8 @@
 
+#ifdef _WIN32
 #include <io.h>
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,6 +14,8 @@
 #include <string>
 #include <iostream>     // std::cout
 #include <sstream>      // std::stringstream
+
+#include <cstring>
 
 #include "irig106ch10.h"
 

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <cstring>
 
 #include "SimState.h"
 #include "Source_BMNavTxt.h"

@@ -3,6 +3,8 @@
 #include "Ch10Writer.h"
 #include "Ch10Writer_1553.h"
 
+#include <cstring>
+
 
 // ----------------------------------------------------------------------------
 // Constructor / Destructor

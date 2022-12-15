@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <iostream>     // std::cout
 #include <iomanip>
+#include <cstring>
 
 #include "Common.h"
 #include "Ch10Format_1553_Nav.h"

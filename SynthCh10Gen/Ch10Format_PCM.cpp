@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <memory>
 //#include <math.h>
+#include <cstring>
 
 // irig106lib
 #include "config.h"
@@ -144,7 +145,13 @@ std::string ClCh10Format_PCM_SynthFmt1::TMATS(ClTmatsIndexes & TmatsIndex, std::
     // Calculate some parameters
     uBitsPerMinorFrame  = uFrameLen * 8;
     uWordsPerMinorFrame = ((uBitsPerMinorFrame - 32) / uWordLen) + 1;
+    
+
+    #ifdef _WIN32
     ulDataRate          = unsigned long(fFrameRate * float(uBitsPerMinorFrame));
+    #else
+    ulDataRate          = (fFrameRate * float(uBitsPerMinorFrame));
+    #endif
     
     // PCM attributes specific to Synthetic PCM Data Format 1
     ssTMATS <<

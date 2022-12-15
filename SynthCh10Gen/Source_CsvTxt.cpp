@@ -4,9 +4,14 @@
 #include <chrono>
 #include <cstdio>
 #include <string>
+#include <cstring>
 
 #include "Source_Nav.h"
 #include "Source_CsvTxt.h"
+
+#ifdef _WIN32
+#define timegm _mkgmtime
+#endif
 
 // ----------------------------------------------------------------------------
 // Constructor / Destructor
@@ -249,7 +254,7 @@ bool ClSource_CsvTxt::ConvertTime(std::string sTime, double *fDecodedTime)
     suNasaTime.tm_sec   = (int)fSecond;
 
     // Convert to a time_t
-    lNasaTime = _mkgmtime(&suNasaTime);
+    lNasaTime = timegm(&suNasaTime);
 
     // Make a floating point representation
     *fDecodedTime = lNasaTime + (fSecond - suNasaTime.tm_sec);

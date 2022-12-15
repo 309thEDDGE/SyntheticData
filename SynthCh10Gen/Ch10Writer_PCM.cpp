@@ -13,6 +13,8 @@
 #include "Ch10Writer.h"
 #include "Ch10Writer_PCM.h"
 
+#include <cstring>
+
 
 // ----------------------------------------------------------------------------
 // Constructor / Destructor

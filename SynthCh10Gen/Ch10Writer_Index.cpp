@@ -8,6 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <cstring>
 
 // irig106lib
 #include "config.h"
@@ -58,7 +59,7 @@ void ClCh10Writer_Index::Init(int iHandle, unsigned int uChanID)
 
 void ClCh10Writer_Index::AppendNodeIndex(SuI106Ch10Header * psuHeader)
     {
-    __int64             uOffset;
+    int64_t             uOffset;
     SuIndex_NodeMsg     suNodeInfo;
 
     enI106Ch10GetPos(iHandle, &uOffset);
@@ -78,7 +79,7 @@ void ClCh10Writer_Index::AppendNodeIndex(SuI106Ch10Header * psuHeader)
 void ClCh10Writer_Index::WriteNodePacket()
     {
     SuI106Ch10Header    suCh10Header;
-    __int64             uOffset;
+    int64_t             uOffset;
     SuIndex_ChanSpec    suIndexCSDW;
 //    SuIndex_Time        suIndexTime;
     unsigned char       achTrailerBuffer[10];
@@ -118,7 +119,7 @@ void ClCh10Writer_Index::WriteNodePacket()
 
 // ----------------------------------------------------------------------------
 
-void ClCh10Writer_Index::AppendRootIndex(SuIndex_Time * psuNodeIndexTime, __int64 llNodeIndexOffset)
+void ClCh10Writer_Index::AppendRootIndex(SuIndex_Time * psuNodeIndexTime, int64_t llNodeIndexOffset)
     {
     SuIndex_RootMsg     suRootData;
 
@@ -133,7 +134,7 @@ void ClCh10Writer_Index::AppendRootIndex(SuIndex_Time * psuNodeIndexTime, __int6
 
 void ClCh10Writer_Index::WriteRootPacket()
     {
-    __int64             uOffset;
+    int64_t             uOffset;
     SuI106Ch10Header    suCh10Header;
     SuIndex_ChanSpec    suIndexCSDW;
 //    SuIndex_Time        suIndexTime;

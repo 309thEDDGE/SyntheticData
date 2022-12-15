@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <memory>
 //#include <math.h>
+#include <cstring>
 
 
 // irig106lib

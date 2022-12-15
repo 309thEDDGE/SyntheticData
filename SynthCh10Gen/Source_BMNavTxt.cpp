@@ -3,6 +3,8 @@
 #include <cstdio>
 #include <string>
 
+#include <cstring>
+
 #include "Source_BMNavTxt.h"
 
 /*

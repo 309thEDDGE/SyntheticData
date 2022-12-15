@@ -35,6 +35,7 @@ increases at the defined tick rate.
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <cstring>
 
 #if defined(_WIN32)
 #define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
@@ -44,6 +45,7 @@ increases at the defined tick rate.
 #include <mswsock.h>
 #pragma comment(lib,"ws2_32.lib") //Winsock Library
 #endif
+
 
 #include "config.h"
 #include "i106_stdint.h"
@@ -96,6 +98,10 @@ using namespace Irig106;
  * Macros and definitions
  * ----------------------
  */
+
+#ifndef ARINC429_BUS_SPEED_LOW
+#define ARINC429_BUS_SPEED_LOW 1
+#endif
 
 #define MAJOR_VERSION  "01"
 #define MINOR_VERSION  "00"

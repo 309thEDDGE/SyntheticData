@@ -9,6 +9,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+#include <cstring>
+
 // irig106lib
 #include "config.h"
 #include "i106_stdint.h"

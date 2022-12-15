@@ -3,6 +3,8 @@
 #include <cstdio>
 #include <string>
 
+#include <cstring>
+
 #include "sqlite3.h"
 
 #include "Source_BMNavDB.h"

@@ -12,6 +12,8 @@
 
 #include "Ch10Writer_A429.h"
 
+#include <cstring>
+
 using namespace Irig106;
 
 
