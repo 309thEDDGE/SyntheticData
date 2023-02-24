@@ -117,6 +117,9 @@ using namespace Irig106;
 #define RT_NAV          6
 #define RT_CONTROLLER  27
 
+// arinc429 Parameters
+#define ARINC429_BUS_SPEED_LOW  12.5
+
 /*
  * Data structures
  * ---------------
